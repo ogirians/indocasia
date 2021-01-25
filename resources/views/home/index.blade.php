@@ -19,7 +19,7 @@
                   <p class="text-center"><img src="{{ asset('public/upload/image/'.$slider->gambar) }}" class="img img-fluid animated" alt="<?php echo $slider->judul_galeri ?>"></p>
                 </div>
               </div>
-            </div>
+            </div> 
           </div>
           <?php } ?>
       </div>
@@ -44,16 +44,17 @@
 
  <!-- ======= About Section ======= -->
     <section id="about" class="about">
-      <div class="container-fluid">
+      <div class="container">
 
-        <div class="row">
-          <div class="col-xl-4 col-lg-6 d-flex justify-content-center align-items-stretch" data-aos="fade-right">
-            <img src="{{ asset('public/upload/image/'.$site->icon) }}" alt="{{ $site->namaweb }}" class="img img-fluid img-thumbnail">
+        <div class="row" id="profil">
+          <div class="col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-right">
+            <!--<img src="{{ asset('public/upload/image/'.$site->icon) }}" alt="{{ $site->namaweb }}" class="img img-fluid img-thumbnail">-->
+             <h1>Selamat datang di {{ $site->namaweb }}</h1>
+             <h3><?php echo $site->deskripsi ?></h3>
           </div>
 
-          <div class="col-xl-8 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">
-            <h3>Selamat datang di {{ $site->namaweb }}</h3>
-            <?php echo $site->tentang ?>
+          <div class="col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">
+            <p><?php echo $site->tentang ?></p>
 
           </div>
         </div>

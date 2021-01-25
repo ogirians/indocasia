@@ -6,9 +6,10 @@ $site = DB::table('konfigurasi')->first();
 <head>
 <meta charset="utf-8">
 <title>{{ $title }}</title>
-<meta name="description" content="{{ $deskripsi }}">
+<meta name="description" content="{{ $deskripsi }}"> 
 <meta name="keywords" content="{{ $keywords }}">
 <meta name="author" content="{{ $site->namaweb }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- icon -->
 <link rel="shortcut icon" href="{{ asset('public/upload/image/'.$site->icon) }}">
 <!-- Google Fonts -->
@@ -116,6 +117,20 @@ $site = DB::table('konfigurasi')->first();
     }
     .galeri {
       margin-bottom: 30px;
+    }
+
+    #profil h1{
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 60px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    #profil h3 {
+        font-weight: 500;
+        line-height: 32px;
+        font-size: 24px;
     }
   </style>
 <?php echo $site->metatext; ?>
