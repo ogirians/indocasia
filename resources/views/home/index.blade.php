@@ -46,16 +46,15 @@
     <section id="about" class="about">
       <div class="container">
 
-        <div class="row" id="profil">
-          <div class="col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-right">
+        <div class="row content" id="profil">
+          <div class="col-lg-6 icon-boxes d-flex flex-column align-items-stretch mt-4" data-aos="fade-right">
             <!--<img src="{{ asset('public/upload/image/'.$site->icon) }}" alt="{{ $site->namaweb }}" class="img img-fluid img-thumbnail">-->
              <h1>Selamat datang di {{ $site->namaweb }}</h1>
              <h3><?php echo $site->deskripsi ?></h3>
           </div>
 
-          <div class="col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">
-            <p><?php echo $site->tentang ?></p>
-
+          <div class="col-lg-6 icon-boxes d-flex flex-column align-items-stretch mt-4" data-aos="fade-left">
+            <?php echo $site->tentang ?>
           </div>
         </div>
 
@@ -68,13 +67,13 @@
 
       
   <div class="container">
-    <div class="col-xl-12 col-lg-12 col-md-12 text-center" data-aos="fade-up">
-          <h2>Produk <?php $site->namaweb ?></h2>
-          <p><?php echo $site->deskripsi ?></p>
-          <br><br>
-    </div>
+
+     <div class="section-title text-center" data-aos="fade-up">
+          <h2>Produk Pilihan</h2>
+          <p><?php echo $site->namaweb ?></p>
+        </div>
         <!-- START -->
-    <div class="row">
+    <div class="row content">
       <?php  
             if($produks) {
             foreach($produks as $produk) { ?>
@@ -121,6 +120,23 @@
   <hr>
 </section>
 <!-- End Apa itu Nitrico? Section -->
+
+
+<!--cta-->
+<section id="cta" class="cta">
+      <div class="container">
+        <div class="text-center" data-aos="zoom-in">
+          <h3>Call us via Whatsapp</h3>
+          <p> Segera hubungi kami untuk info harga terbaru, dan mendapatkan penawaran terbaik dari kami</p>
+          <a class="cta-btn" href="{{ $site->link_whatsapp }}">
+          <i class="fab fa-whatsapp" >
+          </i> Call To Action</a>
+        </div>
+      </div>
+</section>
+<!-- End Cta Section -->
+
+
 
  <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">

@@ -54,12 +54,13 @@ $site = DB::table('konfigurasi')->first();
       margin-top: 10px;
     }
     .kotak {
-      color: #666 !important;
-      background-color: #FFF;
-      margin: 2% 0 10% 0;
-      padding: 20px 20px 40px 20px;
-      border-radius: 20px;
-      border: solid 10px #ffcc00;
+     color: #666 !important;
+     background-color: #FFF;
+     margin: 2% 0 3% 0;
+     padding: 19px 20px 40px 20px;
+     border-radius: 11px;
+     border: solid 3px #009970;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
     }
     .kotak h1 {
       color: #571C5C !important;
@@ -131,7 +132,10 @@ $site = DB::table('konfigurasi')->first();
         font-weight: 500;
         line-height: 32px;
         font-size: 24px;
+        color: #444444;
     }
+
+
   </style>
 <?php echo $site->metatext; ?>
 </head>

@@ -3,19 +3,22 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300">
+        
+         <?php  
+            if($beritas) {
+            foreach($beritas as $berita) { ?>
+
         <div class="kotak">
           <div class="row">
 
-            <div class="col-md-12">
-              <h1 class="text-center"><?php echo $title ?></h1>
+            <div class="col-md-4">
+             
               <hr>
             </div>
               
 
-            <?php  
-            if($beritas) {
-            foreach($beritas as $berita) { ?>
-            <div class="col-lg-12 col-md-12 col-sm-12 mb-4 berita">
+           
+            <div class="col-lg-12 col-md-4 col-sm-12 mb-2 berita">
               <div class="row">
                   <figure class="thumnail col-md-4">
                     <a href="{{ asset('berita/detail/'.$berita->slug_berita) }}">
@@ -40,7 +43,7 @@
                   
                 </div>
             </div>
-          <?php } ?>
+        
           <div class="col-md-12">
             <hr>
                 <p class="text-center">
@@ -48,7 +51,11 @@
                 </p>
             </div>
           </div>
-          <?php }else{ ?>
+         
+      </div>
+
+        <?php } ?>
+       <?php }else{ ?>
           <div class="col-md-12">
             <p class="alert alert-info">Produk tidak ditemukan. Gunakan kata kunci pencarian yang berbeda.</p>
           </div>
@@ -58,8 +65,7 @@
           </div>
             <div class="col-md-12">
               
-            </div>
-      </div>
+          </div>
     </div>
   </div>
 </div>

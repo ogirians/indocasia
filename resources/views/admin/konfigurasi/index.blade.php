@@ -121,6 +121,11 @@
     </div>
 
     <div class="form-group">
+    <label>link whatsapp <i class="fa fa-instagram"></i></label>
+   <input type="text" name="link_whatsapp" placeholder="https://api.whatsapp.com/send?phone=6288996016469&text=halo%20,%20apakah%20barangnya%20ready?" value="<?php echo $site->link_whatsapp ?>" class="form-control">
+    </div>
+
+    <div class="form-group">
     <label>Nama Instagram <i class="fa fa-facebook"></i></label>
     <input type="text" name="nama_instagram" placeholder="Nama akun instagram" value="<?php echo $site->nama_instagram ?>" class="form-control">
     </div>

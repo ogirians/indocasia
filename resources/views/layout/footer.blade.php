@@ -61,9 +61,10 @@ $site       = DB::table('konfigurasi')->first();
 
           <div class="col-lg-4 col-md-6">
             <div class="footer-info">
-              <h3><?php echo $site->namaweb?></h3>
-              <div class="pb-3">
-                <?php echo $site->deskripsi ?>
+              <img src="{{ asset('public/upload/image/'.$site->icon) }}" alt="{{ $site->namaweb }}" class="img img-fluid img-thumbnail" style="background-color: #009970; padding: 0px; border:0px; max-width: 30%">
+              
+              <div class="pb-3 mt-3">
+                <h4><?php echo $site->deskripsi ?></h4>
               </div>
               <div class="social-links mt-3">
                 <a href="<?php echo $site->facebook ?>" class="facebook"><i class="bx bxl-facebook"></i></a>

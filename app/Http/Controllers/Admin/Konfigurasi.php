@@ -10,7 +10,7 @@ use App\Konfigurasi_model;
 class Konfigurasi extends Controller
 {
     // Main page
-    public function index()
+    public function index() 
     {
     	if(Session()->get('username')=="") { return redirect('login')->with(['warning' => 'Mohon maaf, Anda belum login']);}
     	$mykonfigurasi 	= new Konfigurasi_model();
@@ -123,6 +123,7 @@ class Konfigurasi extends Controller
             'nama_facebook'     => $request->nama_facebook,
             'nama_twitter'      => $request->nama_twitter,
             'nama_instagram'    => $request->nama_instagram,
+            'link_whatsapp'    => $request->link_whatsapp,
             'google_map'        => $request->google_map,
             'text_bawah_peta'   => $request->text_bawah_peta,
             'link_bawah_peta'   => $request->link_bawah_peta,
